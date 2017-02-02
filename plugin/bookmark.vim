@@ -176,8 +176,6 @@ function! BookmarkShowAll()
     call s:refresh_line_numbers()
     if exists(':Unite')
         exec ":Unite vim_bookmarks"
-    elseif exists(':CtrlP')
-        exec ":CtrlPBookmark"
     else
       let oldformat = &errorformat    " backup original format
       let &errorformat = "%f:%l:%m"   " custom format for bookmarks
